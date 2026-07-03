@@ -1,24 +1,115 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+import { Tabs } from 'expo-router'
+ 
+export default function thyTabs(){
+    return(
+        <Tabs>
+            <Tabs.Screen name="home" options={{headerShown:false,tabBarStyle:{height:0}}}></Tabs.Screen>
+            <Tabs.Screen name="home1" options={{
+                headerShown:true,
+                headerTitle:"DataCollect",
+                headerTitleAlign:"left",
+                headerTintColor:"rgba(78, 75, 75, 1)",
+                headerTitleStyle:{
+                    fontSize:40,
+                    paddingLeft:20,
+                    paddingBottom:10,
+                    fontWeight:"600",
+                    color:"rgb(51, 102, 255)"
+                },
+                headerStyle:{
+                    height:107,
+                    backgroundColor:"rgba(255,255,255,1)",
+                    
+                },
+                tabBarStyle:{
+                    height:0,
+                }
+                }}></Tabs.Screen>
+            <Tabs.Screen name="cards" options ={{headerShown:false}}></Tabs.Screen>
+            <Tabs.Screen name="phase1" options={{
+                headerShown:true,
+                headerTitle:"DataCollect",
+                headerTitleAlign:"left",
+                headerTintColor:"rgba(78, 75, 75, 1)",
+                headerTitleStyle:{
+                    fontSize:40,
+                    paddingLeft:20,
+                    paddingBottom:10,
+                    fontWeight:"600",
+                    color:"rgb(51, 102, 255)"
+                },
+                headerStyle:{
+                    height:107,
+                    backgroundColor:"rgba(255,255,255,1)",
+                    
+                },
+                tabBarStyle:{
+                    height:0,
+                }
+            }}></Tabs.Screen>
+            <Tabs.Screen name="phase2" options={{
+                headerShown:true,
+                headerTitle:"DataCollect",
+                headerTitleAlign:"left",
+                headerTintColor:"rgba(78, 75, 75, 1)",
+                headerTitleStyle:{
+                    fontSize:40,
+                    paddingLeft:20,
+                    paddingBottom:10,
+                    fontWeight:"600",
+                    color:"rgb(51, 102, 255)"
+                },
+                headerStyle:{
+                    height:107,
+                    backgroundColor:"rgba(255,255,255,1)",
+                    
+                },
+                tabBarStyle:{
+                    height:0,
+                }
+            }}></Tabs.Screen>
+            <Tabs.Screen name="phase3" options={{
+                headerShown:true,
+                headerTitle:"DataCollect",
+                headerTitleAlign:"left",
+                headerTintColor:"rgba(78, 75, 75, 1)",
+                headerTitleStyle:{
+                    fontSize:40,
+                    paddingLeft:20,
+                    paddingBottom:10,
+                    fontWeight:"600",
+                    color:"rgb(51, 102, 255)"
+                },
+                headerStyle:{
+                    height:107,
+                    backgroundColor:"rgba(255,255,255,1)",
+                    
+                },
+                tabBarStyle:{
+                    height:0,
+                }
+            }}></Tabs.Screen>
+            <Tabs.Screen name="fin" options={{
+                headerShown:true,
+                headerTitle:"DataCollect",
+                headerTitleAlign:"left",
+                headerTintColor:"rgba(78, 75, 75, 1)",
+                headerTitleStyle:{
+                    fontSize:40,
+                    paddingLeft:20,
+                    paddingBottom:10,
+                    fontWeight:"600",
+                    color:"rgb(51, 102, 255)"
+                },
+                headerStyle:{
+                    height:107,
+                    backgroundColor:"rgba(255,255,255,1)",
+                    
+                },
+                tabBarStyle:{
+                    height:0,
+                }
+            }}></Tabs.Screen>
+        </Tabs>
+    )
 }
