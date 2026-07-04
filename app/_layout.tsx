@@ -3,8 +3,8 @@ import { Tabs } from 'expo-router'
 export default function thyTabs(){
     return(
         <Tabs>
-            <Tabs.Screen name="home" options={{headerShown:false,tabBarStyle:{height:0}}}></Tabs.Screen>
-            <Tabs.Screen name="home1" options={{
+            <Tabs.Screen name="index" options={{headerShown:false,tabBarStyle:{height:0}}}></Tabs.Screen>
+            <Tabs.Screen name="home" options={{
                 headerShown:true,
                 headerTitle:"DataCollect",
                 headerTitleAlign:"left",

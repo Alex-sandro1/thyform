@@ -1,30 +1,248 @@
+import { Ionicons } from '@expo/vector-icons'
 import { router } from 'expo-router'
-import React, { useEffect } from 'react'
-import { Image, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Cards } from './cards'
+import { Cards1 } from './cards1'
 
-export default function thst(){
-    const seeFun=()=>{
-        return(
-            <View>
-                <View style={{borderRadius:10, overflow:"hidden",marginTop:440, marginLeft:50}}>
-                    <Image source={require("../assets/images/thyicn1.png")} style={{height:200,width:200}}></Image> 
-                </View>    
-                    <Text style={{fontSize:37, fontWeight:"bold",color:"rgb(51, 102, 255)", marginLeft:50, marginTop:10}}>DataCollect</Text>
-                <Text style={{paddingTop:20, fontSize:25, marginLeft:-20}}>Developed by Kitaraju Mgonja</Text>
-            </View>
-        )
+export default function thyHome(){
+    const[val,setval]=useState("")
+    const[ismal,setismal]=useState(false)
+    const[genopt,setgenopt]=useState<number|null>(null)
+    const[thyag,setthyag]=useState<number|null>(null)
+    const[exp,setexp]=useState<number|null>(null)
+    const[pos,setpos]=useState<number|null>(null)
+    const[pos1,setpos1]=useState<string|null>(null)
+    const[othEdu,setothEdu]=useState("")
+    const[thyopn,setthyopn]=useState(false)
+    const[edId, setedId]=useState<number|null>(null)
+    const thyconver=(thyopts:{id:number,label:string}[],id:number|null)=>{
+        return thyopts.find(op=>op.id==id)?.label
     }
     
-    useEffect(()=>{
-        setTimeout(()=>{
-            router.push("/home1")
-        },2000)
+    const Styles=StyleSheet.create({
+        header:{
+            fontSize:50,
+            paddingLeft:40,
+            paddingTop:20
+        },
+        thysub:{
+            fontSize:23,
+            paddingLeft:43,
+            color:"rgba(78, 75, 75, 1)"
+        },
+        insd:{
+            height:1600,
+            width:700,
+            backgroundColor:"white",
+            marginLeft:40,
+            marginTop:20,
+            borderRadius:20,
+            borderWidth:2,
+            borderColor:"rgba(78, 75, 75, 1)"
+
+
+        },
+        inn:{
+            borderColor:"rgba(78, 75, 75, 1)",
+            borderWidth:2,
+            height:70,
+            width:595,
+            marginLeft:50,
+            borderRadius:10,
+            fontSize:25,
+            paddingLeft:20,
+            zIndex:0
+        },
+        inn1:{
+            borderColor:"rgba(78, 75, 75, 1)",
+            borderWidth:2,
+            height:70,
+            width:595,
+            marginLeft:50,
+            borderRadius:10,
+            fontSize:25,
+            paddingLeft:20,
+            zIndex:0,
+            elevation:0,
+            opacity:thyopn?0:1
+            
+        },
+        thylabel1:{
+            fontSize:25,
+            paddingLeft:50,
+            paddingTop:20,
+            paddingBottom:10,
+            marginTop:0,
+            zIndex:0,
+            elevation:0,
+            opacity:thyopn?0:1
+        },
+        thylabel:{
+            fontSize:25,
+            paddingLeft:50,
+            paddingTop:20,
+            paddingBottom:10
+        },
+        selbox:{
+            height:70,
+            width:295,
+            borderWidth:2,
+            borderColor:"rgba(78, 75, 75, 1)",
+            borderRadius:10,
+            marginLeft:7,
+            marginTop:10
+
+        },
+        thyexp:{
+            height:70,
+            width:595,
+            borderWidth:2,
+            borderRadius:10,
+            marginTop:10
+
+        },
+        thypress:{
+            height:90,
+            width:700,
+            backgroundColor:"rgb(51, 102, 255)",
+            marginLeft:40,
+            borderRadius:20,
+            marginTop:30
+        },
+        presstxt:{
+            fontSize:40,
+            color:"white",
+            paddingLeft:270,
+            paddingTop:13
+        }
+
     })
-        
+    const genOpt=[
+        {id:1,label:"Male"},
+        {id:2,label:"Female"}
+    ]
+    const thyage1=[
+        {id:1, label:"18-28"},
+        {id:2, label:"29-39"},
+        {id:3, label:"40-50"},
+        {id:4, label:"51-60"}
+    ]
+    
+    const thyexp=[
+        {id:1, label:"Below 5"},
+        {id:2, label:"6-10"},
+        {id:3, label:"11-15"},
+        {id:4, label:"16-20"},
+        {id:5, label:"Over 20"}
+    ]
+    const thypos=[
+        {id:1, label:"Mathematics Teacher"},
+        {id:2, label:"Academic Teacher"},
+        {id:3, label:"Head Teacher"}
+    ]
+    const thyeduc=[
+        {id:1, label:"Certificate"},
+        {id:2, label:"Diploma"},
+        {id:3, label:"Bachelor"},
+        {id:4, label:"Master"}
+    ] 
+    const thyobj=[
+            {id:1, label:"Certificate"},
+            {id:2, label:"Diploma"},
+            {id:3, label:"Bachelor"},
+            {id:4, label:"Masters"}
+    ]
+       
+    let thyformobj={
+        name:val,
+        gendr:thyconver(genOpt,genopt),
+        thyage:thyconver(thyage1,thyag),
+        exp:thyconver(thyexp,genopt),
+        pos:thyconver(thypos,pos),
+        educ:thyconver(thyobj,edId),
+    
+
+    }
+    const thyconf=()=>{
+            const thy1=Object.values(thyformobj).some((value)=>value===""||value==null)
+            if(!thy1){
+                router.push({pathname:"/phase1",params:thyformobj})
+            } 
+            else{
+                Alert.alert("Warning","Please fill all the fields")
+            } 
+            
+                
+        }
+    
+   
     
     return(
-        <View style={{marginLeft:220}}>
-            {seeFun()}
-        </View>
-    )
+        <View>
+            <ScrollView>
+                <View style={{height:1900}}>
+                    <Text style={Styles.header}>Demographic Information</Text>
+                    <Text style={Styles.thysub}>Step 1 of 4</Text>
+                    <View style={Styles.insd}>
+                        <Text style={Styles.thylabel}>Name</Text>
+                        <TextInput 
+                            onChangeText={(txt:any)=>setval(txt)}
+                            value={val}
+                            placeholder="Enter your name"
+                            style={Styles.inn}
+                        />
+                        <Text style={Styles.thylabel}>Gender</Text>  
+                        <View style={{flexDirection:"row", marginLeft:40}}>
+                            {genOpt.map((genOpt)=>(
+                                <Cards key={genOpt.id} label={genOpt.label} setisselect={()=>{setgenopt(genOpt.id)}} isselect={genopt==genOpt.id} />
+                            ))}
+                            
+                        </View> 
+                        <Text style={Styles.thylabel}>Age group</Text>
+                        <View style={{flexDirection:"row",flexWrap:"wrap", marginLeft:40}}>
+                            {thyage1.map((thyage1)=>(
+                                <View style={Styles.selbox}>
+                                    <Cards key={thyage1.id} label={thyage1.label} setisselect={()=>{setthyag(thyage1.id)}} isselect={thyag==thyage1.id}/>
+                                </View>    
+                            ))}
+                        </View>
+                        
+                        <Text style={Styles.thylabel}>Teaching Experience</Text>
+                        <View style={{flexDirection:"column",marginLeft:40}}>
+                            {thyexp.map((thyexp)=>(
+                                <View style={Styles.thyexp}>    
+                                    <Cards key={thyexp.id} label={thyexp.label} setisselect={()=>{setexp(thyexp.id)}} isselect={exp==thyexp.id}/>
+                                </View>    
+                            ))}
+                        </View>
+                        <Text style={Styles.thylabel}>Current Position</Text>
+                        <View style={{marginLeft:40}}>
+                            {thypos.map((thypos)=>(
+                                <View style={Styles.thyexp}>     
+                                    <Cards key={thypos.id} label={thypos.label} setisselect={()=>{setpos(thypos.id)}} isselect={pos==thypos.id}/>
+                                </View>    
+                            ))}
+                        </View>
+                        <Text style={Styles.thylabel}>Education Level</Text>   
+                        <View style={{marginLeft:40}}>
+                            <Cards1 thyopn={thyopn} setthyopn={setthyopn} thyobj={thyobj} thyid={edId} setthyid={setedId}/>
+                        </View>
+                        <Text style={Styles.thylabel1}>Other(Specify)</Text>
+                        <TextInput
+                            value={othEdu}
+                            onChangeText={(txt)=>{setothEdu(txt)}}
+                            placeholder="Specify if other"
+                            style={Styles.inn1}
+                        />
+                    </View>
+                    <TouchableOpacity style={Styles.thypress} onPress={()=>{thyconf()}}>
+                        <Text style={Styles.presstxt}>Next  <Ionicons name="arrow-forward" size={40} color="white"/></Text>
+                    </TouchableOpacity>
+                </View>
+                
+            </ScrollView>
+        </View>    
+            
+    ) 
 }
