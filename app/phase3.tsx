@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import Animated, { FadeIn, FadeOut, useAnimatedStyle, withTiming } from 'react-native-reanimated'
 import { Cards } from './cards'
+import { scaleFont, scaleHeight, scaleWidth } from './thyscale'
 
 export default function thyph3(){
     const[chall,setchall]=useState<number|null>(null)
@@ -18,114 +19,114 @@ export default function thyph3(){
     
     const Styles=StyleSheet.create({
         header:{
-            fontSize:50,
-            paddingLeft:40,
-            paddingTop:20
+            fontSize:scaleFont(50),
+            paddingLeft:scaleWidth(40),
+            paddingTop:scaleHeight(20)
         },
         thysub:{
-            fontSize:23,
-            paddingLeft:43,
+            fontSize:scaleFont(23),
+            paddingLeft:scaleWidth(43),
             color:"rgba(78, 75, 75, 1)"
         },
         insd:{
-            height:1150,
-            width:700,
+            height:scaleHeight(1150),
+            width:scaleWidth(700),
             backgroundColor:"white",
-            marginLeft:40,
-            marginTop:20,
-            borderRadius:20,
-            borderWidth:2,
+            marginLeft:scaleWidth(40),
+            marginTop:scaleHeight(20),
+            borderRadius:scaleHeight(20),
+            borderWidth:scaleHeight(2),
             borderColor:"rgba(78, 75, 75, 1)",
             overflow:"hidden",
-            paddingBottom:10
+            paddingBottom:scaleHeight(10)
 
         },
         thylabel:{
-            fontSize:25,
-            paddingLeft:50,
-            paddingTop:20,
-            paddingBottom:10
+            fontSize:scaleFont(25),
+            paddingLeft:scaleWidth(50),
+            paddingTop:scaleHeight(20),
+            paddingBottom:scaleHeight(10)
         },
         thyexp:{
-            height:70,
-            width:595,
-            borderWidth:2,
-            borderRadius:10,
-            marginTop:20
+            height:scaleHeight(70),
+            width:scaleWidth(595),
+            borderWidth:scaleHeight(2),
+            borderRadius:scaleHeight(10),
+            marginTop:scaleHeight(20)
 
         },
         thyexp1:{
-            height:170,
-            width:595,
-            borderWidth:2,
-            borderRadius:10,
-            marginTop:20,
+            height:scaleHeight(170),
+            width:scaleWidth(595),
+            borderWidth:scaleHeight(2),
+            borderRadius:scaleHeight(10),
+            marginTop:scaleHeight(20),
             
 
         },
         inn:{
             borderColor:"rgba(78, 75, 75, 1)",
-            borderWidth:2,
-            height:70,
-            width:570,
-            marginLeft:10,
-            marginTop:14,
-            borderRadius:10,
-            fontSize:25,
-            paddingLeft:20,
+            borderWidth:scaleHeight(2),
+            height:scaleHeight(70),
+            width:scaleWidth(570),
+            marginLeft:scaleWidth(10),
+            marginTop:scaleHeight(14),
+            borderRadius:scaleHeight(10),
+            fontSize:scaleFont(25),
+            paddingLeft:scaleWidth(20),
             zIndex:0,
             
         },
         inn1:{
             borderColor:"rgba(78, 75, 75, 1)",
-            borderWidth:2,
-            height:70,
-            width:570,
-            marginLeft:10,
-            marginTop:14,
-            borderRadius:10,
-            fontSize:25,
-            paddingLeft:20,
+            borderWidth:scaleHeight(2),
+            height:scaleHeight(70),
+            width:scaleWidth(570),
+            marginLeft:scaleWidth(10),
+            marginTop:scaleHeight(14),
+            borderRadius:scaleHeight(10),
+            fontSize:scaleFont(25),
+            paddingLeft:scaleWidth(20),
             zIndex:0,
            
             
         },
         thypress:{
-            height:90,
-            width:350,
+            height:scaleHeight(90),
+            width:scaleWidth(350),
             backgroundColor:"rgb(51, 102, 255)",
-            marginLeft:40,
-            borderRadius:20,
-            marginTop:30
+            marginLeft:scaleWidth(40),
+            borderRadius:scaleHeight(20),
+            marginTop:scaleHeight(30)
         },
         presstxt:{
-            fontSize:40,
+            fontSize:scaleFont(40),
             color:"white",
-            paddingLeft:120,
-            paddingTop:13
+            paddingLeft:scaleWidth(120),
+            paddingTop:scaleHeight(13)
         },
         arr:{
-            marginLeft:220,
-            marginTop:-44
+            marginLeft:scaleWidth(220),
+            marginTop:scaleHeight(-44)
         },
         thypress1:{
-            height:90,
-            width:350,
+            height:scaleHeight(90),
+            width:scaleWidth(350),
             backgroundColor:"white",
-            marginLeft:40,
-            borderRadius:20,
-            marginTop:30,
-            borderWidth:2
+            marginLeft:scaleWidth(40),
+            borderRadius:scaleHeight(20),
+            marginTop:scaleHeight(30),
+            borderWidth:scaleHeight(2)
         },
         presstxt1:{
-            fontSize:40,
+            fontSize:scaleFont(40),
             color:"black",
-            paddingLeft:120,
-            paddingTop:13
+            paddingLeft:scaleWidth(120),
+            paddingTop:scaleHeight(13)
         },
         arr1:{
-            marginLeft:70,
-            marginTop:-44,
+            marginLeft:scaleWidth(70),
+            marginTop:scaleHeight(-44),
 
         }
     })
@@ -179,7 +180,7 @@ export default function thyph3(){
                 <Text style={Styles.thysub}>Step 4 of 4</Text>
                 <View style={Styles.insd}>
                     <Text style={Styles.thylabel}>MOST CRITICAL CHALLENGE</Text>
-                    <View style={{marginLeft:40}}>
+                    <View style={{marginLeft:scaleWidth(40)}}>
                         {thychall.map((thychall)=>(
                             <View style={Styles.thyexp}>     
                                 <Cards key={thychall.id} label={thychall.label} setisselect={()=>{setchall(thychall.id)}} isselect={chall==thychall.id}/>
@@ -201,19 +202,19 @@ export default function thyph3(){
                                 
                         </Animated.View>  
                     </View> 
-                    <Text style={[Styles.thylabel,{marginTop:10,marginBottom:-15}]}>Support or resources needed</Text>   
+                    <Text style={[Styles.thylabel,{marginTop:scaleHeight(10),marginBottom:scaleHeight(-15)}]}>Support or resources needed</Text>   
                     <TextInput 
                         value={thyresrc}
                         onChangeText={(txt)=>{setthyresrc(txt)}}
                         placeholder="What would help you the mostt"
-                        style={[Styles.inn,{marginLeft:40}]}
+                        style={[Styles.inn,{marginLeft:scaleWidth(40)}]}
                     />
-                    <Text style={[Styles.thylabel,{marginTop:10,marginBottom:-15}]}>Additional comments or suggesstion</Text>   
+                    <Text style={[Styles.thylabel,{marginTop:scaleHeight(10),marginBottom:scaleHeight(-15)}]}>Additional comments or suggesstion</Text>   
                     <TextInput 
                         value={thysugg}
                         onChangeText={(txt)=>{setthysugg(txt)}}
                         placeholder="Anything else you'd like to share"
-                        style={[Styles.inn,{marginLeft:40}]}
+                        style={[Styles.inn,{marginLeft:scaleWidth(40)}]}
                     />
                 </View>
                 <View style={{flexDirection:"row"}}>
@@ -223,7 +224,7 @@ export default function thyph3(){
                     </TouchableOpacity>
                     <TouchableOpacity style={Styles.thypress} onPress={()=>{thyconf()}}>
                         <Text style={Styles.presstxt}>Submit</Text>
-                        <MaterialIcons name="arrow-forward" size={40} style={[Styles.arr,{marginLeft:250}]} color="white"/>
+                        <MaterialIcons name="arrow-forward" size={40} style={[Styles.arr,{marginLeft:scaleWidth(250)}]} color="white"/>
                     </TouchableOpacity>
                 </View>       
             </View> 

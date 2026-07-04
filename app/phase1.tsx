@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { Cards } from './cards'
 import { Cards2 } from './cards2'
+import { scaleFont, scaleHeight, scaleWidth } from './thyscale'
 
 export default function thph1(){
     const[ag,setag]=useState<number|null>(null)
@@ -17,109 +18,109 @@ export default function thph1(){
     const thyform=useLocalSearchParams<{thyformobj:any}>()
     const Styles=StyleSheet.create({
         header:{
-            fontSize:50,
-            paddingLeft:40,
-            paddingTop:20
+            fontSize:scaleFont(50),
+            paddingLeft:scaleWidth(40),
+            paddingTop:scaleHeight(20)
         },
         thysub:{
-            fontSize:23,
-            paddingLeft:43,
+            fontSize:scaleFont(23),
+            paddingLeft:scaleWidth(43),
             color:"rgba(78, 75, 75, 1)"
         },
         insd:{
-            height:1200,
-            width:700,
+            height:scaleHeight(1200),
+            width:scaleWidth(700),
             backgroundColor:"white",
-            marginLeft:40,
-            marginTop:20,
-            borderRadius:20,
-            borderWidth:2,
+            marginLeft:scaleWidth(40),
+            marginTop:scaleHeight(20),
+            borderRadius:scaleHeight(20),
+            borderWidth:scaleHeight(2),
             borderColor:"rgba(78, 75, 75, 1)",
             overflow:"hidden",
-            paddingBottom:10
+            paddingBottom:scaleHeight(10)
 
         },
         thylabel:{
-            fontSize:25,
-            paddingLeft:50,
-            paddingTop:20,
-            paddingBottom:10
+            fontSize:scaleFont(25),
+            paddingLeft:scaleWidth(50),
+            paddingTop:scaleHeight(20),
+            paddingBottom:scaleHeight(10)
         },
         thylabel1:{
-            fontSize:20,
-            paddingLeft:50,
-            marginTop:-10,
-            marginBottom:-10
+            fontSize:scaleFont(20),
+            paddingLeft:scaleWidth(50),
+            marginTop:scaleHeight(-10),
+            marginBottom:scaleHeight(-10)
         },
         selbox:{
-            height:70,
-            width:295,
-            borderWidth:2,
+            height:scaleHeight(70),
+            width:scaleWidth(295),
+            borderWidth:scaleHeight(2),
             borderColor:"rgba(78, 75, 75, 1)",
-            borderRadius:10,
-            marginLeft:7,
-            marginTop:10
+            borderRadius:scaleHeight(10),
+            marginLeft:scaleWidth(7),
+            marginTop:scaleHeight(10)
 
         },
         thysel:{
-            height:60,
-            width:100,
-            borderRadius:10,
-            borderWidth:2,
-            marginLeft:20
+            height:scaleHeight(60),
+            width:scaleWidth(100),
+            borderRadius:scaleHeight(10),
+            borderWidth:scaleHeight(2),
+            marginLeft:scaleWidth(20)
         },
         seltxt:{
-            fontSize:30,
-            paddingLeft:40,
-            paddingTop:5
+            fontSize:scaleFont(30),
+            paddingLeft:scaleWidth(40),
+            paddingTop:scaleHeight(5)
         },
         inn:{
             borderColor:"rgba(78, 75, 75, 1)",
-            borderWidth:2,
-            height:80,
-            width:595,
-            marginLeft:50,
-            borderRadius:10,
-            fontSize:25,
-            paddingLeft:20,
+            borderWidth:scaleHeight(2),
+            height:scaleHeight(80),
+            width:scaleWidth(595),
+            marginLeft:scaleWidth(50),
+            borderRadius:scaleHeight(10),
+            fontSize:scaleFont(25),
+            paddingLeft:scaleWidth(20),
             zIndex:0
         },
         thypress:{
-            height:90,
-            width:350,
+            height:scaleHeight(90),
+            width:scaleWidth(350),
             backgroundColor:"rgb(51, 102, 255)",
-            marginLeft:40,
-            borderRadius:20,
-            marginTop:30
+            marginLeft:scaleWidth(40),
+            borderRadius:scaleHeight(20),
+            marginTop:scaleHeight(30)
         },
         presstxt:{
-            fontSize:40,
+            fontSize:scaleFont(40),
             color:"white",
-            paddingLeft:120,
-            paddingTop:13
+            paddingLeft:scaleWidth(120),
+            paddingTop:scaleHeight(13)
         },
         arr:{
-            marginLeft:220,
-            marginTop:-44
+            marginLeft:scaleWidth(220),
+            marginTop:scaleHeight(-44)
         },
         thypress1:{
-            height:90,
-            width:350,
+            height:scaleHeight(90),
+            width:scaleWidth(350),
             backgroundColor:"white",
-            marginLeft:40,
-            borderRadius:20,
-            marginTop:30,
-            borderWidth:2
+            marginLeft:scaleWidth(40),
+            borderRadius:scaleHeight(20),
+            marginTop:scaleHeight(30),
+            borderWidth:scaleHeight(2)
         },
         presstxt1:{
-            fontSize:40,
+            fontSize:scaleFont(40),
             color:"black",
-            paddingLeft:120,
-            paddingTop:13
+            paddingLeft:scaleWidth(120),
+            paddingTop:scaleHeight(13)
         },
         arr1:{
-            marginLeft:70,
-            marginTop:-44,
+            marginLeft:scaleWidth(70),
+            marginTop:scaleHeight(-44),
 
         }
     })
@@ -172,7 +173,7 @@ export default function thph1(){
 
     return(
         <ScrollView>
-            <View style={{height:1570}}>
+            <View style={{height:scaleHeight(1570)}}>
                 <Text style={Styles.header}>Nature Of Your Mathematics Class</Text>
                 <Text style={Styles.thysub}>Step 2 of 4</Text>
                 <View style={Styles.insd}>
