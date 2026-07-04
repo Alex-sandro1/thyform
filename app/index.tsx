@@ -17,7 +17,7 @@ export default function thst(){
     
     useEffect(()=>{
         setTimeout(()=>{
-            router.push("/home1")
+            router.push("/home")
         },2000)
     })
         
