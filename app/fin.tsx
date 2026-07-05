@@ -12,13 +12,13 @@ export default function FinalFlash(){
             backgroundColor:"rgb(51, 102, 255)",
             justifyContent:"center",
             alignItems:"center",
-            marginLeft:scaleWidth(220),
+            marginLeft:scaleWidth(250),
             marginTop:scaleHeight(90),
         },
         succ:{
             fontSize:scaleFont(46),
             color:"blue",
-            paddingLeft:scaleWidth(130),
+            paddingLeft:scaleWidth(210),
             paddingTop:scaleHeight(15),
             fontWeight:"700",
 
@@ -26,13 +26,13 @@ export default function FinalFlash(){
         succ1:{
             fontSize:scaleFont(46),
             color:"blue",
-            paddingLeft:scaleWidth(190),
+            paddingLeft:scaleWidth(250),
             paddingTop:scaleHeight(-10),
             fontWeight:"700",
         },
         expl:{
-            fontSize:scaleFont(22),
-            paddingLeft:scaleWidth(60)
+            fontSize:scaleFont(26),
+            paddingLeft:scaleWidth(120)
         },
         thypress:{
             height:scaleHeight(90),
@@ -45,8 +45,8 @@ export default function FinalFlash(){
         presstxt:{
             fontSize:scaleFont(32),
             color:"white",
-            paddingLeft:scaleWidth(250),
-            paddingTop:scaleHeight(13)
+            paddingLeft:scaleWidth(290),
+            paddingTop:scaleHeight(20)
         }
     })
     
@@ -57,11 +57,11 @@ export default function FinalFlash(){
             </View>
             <Text style={Styles.succ}>Survey Submitted</Text>
             <Text style={Styles.succ1}>Successfully</Text>
-            <Text style={Styles.expl}>Thanks for your cooperation.Your insights will be</Text>
+            <Text style={[Styles.expl,{marginTop:scaleHeight(10)}]}>Thanks for your cooperation.Your insights will be</Text>
             <Text style={Styles.expl}>very usefull in improving Mathematics education</Text>
-            <Text style={[Styles.expl,{paddingLeft:270}]}>strategies</Text>
-            <Text style={Styles.expl}>This app is made for one time use only. Feel free</Text>
-            <Text style={[Styles.expl,{paddingLeft:170}]}>to close the app and uninstall it</Text>
+            <Text style={[Styles.expl,{paddingLeft:scaleWidth(320)}]}>strategies</Text>
+            <Text style={[Styles.expl,{marginTop:scaleHeight(10)}]}>This app is made for one time use only. Feel free</Text>
+            <Text style={[Styles.expl,{paddingLeft:scaleWidth(200)}]}>to close the app and uninstall it</Text>
             {Platform.OS=="android"?<TouchableOpacity style={Styles.thypress} onPress={()=>{BackHandler.exitApp()}}>
                                         <Text style={Styles.presstxt}>Exit app</Text>
                                     </TouchableOpacity>:<Text></Text>}
