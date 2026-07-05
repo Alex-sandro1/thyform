@@ -158,17 +158,17 @@ export default function thyph2(){
                 <Text style={Styles.header}>Nature Of Your Mathematics Class</Text>
                 <Text style={Styles.thysub}>Step 3 of 4</Text>
                 <View style={Styles.insd}>
-                    <Text style={[Styles.thylabel2,{marginBottom:20, fontWeight:"700"}]}>TEACHING STRATEGIES:FREQUENCY AND EFFECTIVENESS</Text>
+                    <Text style={[Styles.thylabel2,{marginBottom:scaleHeight(20), fontWeight:"700"}]}>TEACHING STRATEGIES:FREQUENCY AND EFFECTIVENESS</Text>
                     <Text style={Styles.thylabel1}>Key:(1:Not Effective, 2:Slightly Effective, 3:Moderately Effective, 4:Very Effective, 5:Extremely Effective)</Text>
                     <View style={Styles.thycol}>
-                        <Text style={[Styles.thylabel,{marginBottom:-20, marginTop:-3,fontWeight:"700"}]}>Differentiated Instruction</Text>
-                        <Text style={[Styles.thylabel,{marginBottom:8}]}>FREQUENCY</Text>
-                        <Text style={[Styles.thylabel,{marginTop:-73,marginLeft:320}]}>EFFECTIVENESS</Text>
-                        <View style={{flexDirection:"row", marginLeft:7}}>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(-20), marginTop:scaleHeight(-3),fontWeight:"700"}]}>Differentiated Instruction</Text>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(10)}]}>FREQUENCY</Text>
+                        <Text style={[Styles.thylabel,{marginTop:scaleHeight(-73),marginLeft:scaleWidth(320)}]}>EFFECTIVENESS</Text>
+                        <View style={{flexDirection:"row", marginLeft:scaleWidth(7)}}>
                             {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thyselect==thyarr.id} setisselect={()=>{setthyselect(thyarr.id)}}/>
                             ))}
-                            <View style={{marginLeft:50, flexDirection:"row"}}>
+                            <View style={{marginLeft:scaleWidth(50), flexDirection:"row"}}>
                                 {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thyselect1==thyarr.id} setisselect={()=>{setthyselect1(thyarr.id)}}/>
                                 ))}
@@ -176,14 +176,14 @@ export default function thyph2(){
                         </View>
                     </View>
                     <View style={Styles.thycol}>
-                        <Text style={[Styles.thylabel,{marginBottom:-20, marginTop:-3,fontWeight:"700"}]}>Collaborative Work/ Peer Teaching</Text>
-                        <Text style={[Styles.thylabel,{marginBottom:8}]}>FREQUENCY</Text>
-                        <Text style={[Styles.thylabel,{marginTop:-73,marginLeft:320}]}>EFFECTIVENESS</Text>
-                        <View style={{flexDirection:"row", marginLeft:7}}>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(-20), marginTop:scaleHeight(-3),fontWeight:"700"}]}>Collaborative Work/ Peer Teaching</Text>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(10)}]}>FREQUENCY</Text>
+                        <Text style={[Styles.thylabel,{marginTop:scaleHeight(-73),marginLeft:scaleWidth(320)}]}>EFFECTIVENESS</Text>
+                        <View style={{flexDirection:"row", marginLeft:scaleWidth(7)}}>
                             {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thystr==thyarr.id} setisselect={()=>{setthystr(thyarr.id)}}/>
                             ))}
-                            <View style={{marginLeft:50, flexDirection:"row"}}>
+                            <View style={{marginLeft:scaleWidth(50), flexDirection:"row"}}>
                                 {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thystr1==thyarr.id} setisselect={()=>{setthystr1(thyarr.id)}}/>
                                 ))}
@@ -192,14 +192,14 @@ export default function thyph2(){
                         </View>
                     </View>
                     <View style={Styles.thycol}>
-                        <Text style={[Styles.thylabel,{marginBottom:-20, marginTop:-3,fontWeight:"700"}]}>Active Learning and Games</Text>
-                        <Text style={[Styles.thylabel,{marginBottom:8}]}>FREQUENCY</Text>
-                        <Text style={[Styles.thylabel,{marginTop:-73,marginLeft:320}]}>EFFECTIVENESS</Text>
-                        <View style={{flexDirection:"row", marginLeft:7}}>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(-20), marginTop:scaleHeight(-3),fontWeight:"700"}]}>Active Learning and Games</Text>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(10)}]}>FREQUENCY</Text>
+                        <Text style={[Styles.thylabel,{marginTop:scaleHeight(-73),marginLeft:scaleWidth(320)}]}>EFFECTIVENESS</Text>
+                        <View style={{flexDirection:"row", marginLeft:scaleWidth(7)}}>
                             {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thystr2==thyarr.id} setisselect={()=>{setthystr2(thyarr.id)}}/>
                             ))}
-                            <View style={{marginLeft:50, flexDirection:"row"}}>
+                            <View style={{marginLeft:scaleWidth(50), flexDirection:"row"}}>
                                 {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thystr3==thyarr.id} setisselect={()=>{setthystr3(thyarr.id)}}/>
                                 ))}
@@ -208,14 +208,14 @@ export default function thyph2(){
                         </View>
                     </View>
                     <View style={Styles.thycol}>
-                        <Text style={[Styles.thylabel,{marginBottom:-20, marginTop:-3,fontWeight:"700"}]}>Repetition and Conceptual Models</Text>
-                        <Text style={[Styles.thylabel,{marginBottom:8}]}>FREQUENCY</Text>
-                        <Text style={[Styles.thylabel,{marginTop:-73,marginLeft:320}]}>EFFECTIVENESS</Text>
-                        <View style={{flexDirection:"row", marginLeft:7}}>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(-20), marginTop:scaleHeight(-3),fontWeight:"700"}]}>Repetition and Conceptual Models</Text>
+                        <Text style={[Styles.thylabel,{marginBottom:scaleHeight(10)}]}>FREQUENCY</Text>
+                        <Text style={[Styles.thylabel,{marginTop:scaleHeight(-73),marginLeft:scaleWidth(320)}]}>EFFECTIVENESS</Text>
+                        <View style={{flexDirection:"row", marginLeft:scaleWidth(7)}}>
                             {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thystr4==thyarr.id} setisselect={()=>{setthystr4(thyarr.id)}}/>
                             ))}
-                            <View style={{marginLeft:50, flexDirection:"row"}}>
+                            <View style={{marginLeft:scaleWidth(50), flexDirection:"row"}}>
                                 {thyarr.map((thyarr)=>(
                                 <Cards key={thyarr.id} label={thyarr.id} isselect={thystr5==thyarr.id} setisselect={()=>{setthystr5(thyarr.id)}}/>
                                 ))}
@@ -223,7 +223,7 @@ export default function thyph2(){
                         
                         </View>
                     </View>
-                    <Text style={[Styles.thylabel,{marginLeft:20}]}>Other Methods Used</Text>
+                    <Text style={[Styles.thylabel,{marginLeft:scaleWidth(20)}]}>Other Methods Used</Text>
                     <TextInput
                         value={thyval}
                         onChangeText={(thytxt)=>{setthyval(thytxt)}}
