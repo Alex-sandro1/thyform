@@ -23,10 +23,14 @@ export default function thyTabs(){
                     
                 },
                 tabBarStyle:{
-                    height:30,
+                    height:0,
                 }
                 }}></Tabs.Screen>
             <Tabs.Screen name="cards" options ={{headerShown:false}}></Tabs.Screen>
+            <Tabs.Screen name="cards1" options ={{headerShown:false}}></Tabs.Screen>
+            <Tabs.Screen name="cards2" options ={{headerShown:false}}></Tabs.Screen>
+            <Tabs.Screen name="cards3" options ={{headerShown:false}}></Tabs.Screen>
+            <Tabs.Screen name="thyscale" options ={{headerShown:false}}></Tabs.Screen>
             <Tabs.Screen name="phase1" options={{
                 headerShown:true,
                 headerTitle:"DataCollect",
@@ -108,7 +112,7 @@ export default function thyTabs(){
                     
                 },
                 tabBarStyle:{
-                    height:30,
+                    height:0,
                 }
             }}></Tabs.Screen>
         </Tabs>
