@@ -1,51 +1,52 @@
 import { Ionicons } from '@expo/vector-icons'
 import React from 'react'
 import { BackHandler, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { scaleFont, scaleHeight, scaleWidth } from './thyscale'
 
 export default function FinalFlash(){
     const Styles=StyleSheet.create({
         tikiTiki:{
-            height:300,
-            width:300,
-            borderRadius:150,
+            height:scaleHeight(300),
+            width:scaleWidth(300),
+            borderRadius:scaleWidth(150),
             backgroundColor:"rgb(51, 102, 255)",
             justifyContent:"center",
             alignItems:"center",
-            marginLeft:220,
-            marginTop:90,
+            marginLeft:scaleWidth(220),
+            marginTop:scaleHeight(90),
         },
         succ:{
-            fontSize:60,
+            fontSize:scaleFont(60),
             color:"blue",
-            paddingLeft:130,
-            paddingTop:15,
+            paddingLeft:scaleWidth(130),
+            paddingTop:scaleHeight(15),
             fontWeight:"700",
 
         },
         succ1:{
-            fontSize:60,
+            fontSize:scaleFont(60),
             color:"blue",
-            paddingLeft:190,
-            paddingTop:-10,
+            paddingLeft:scaleWidth(190),
+            paddingTop:scaleHeight(-10),
             fontWeight:"700",
         },
         expl:{
-            fontSize:30,
-            paddingLeft:60
+            fontSize:scaleFont(30),
+            paddingLeft:scaleWidth(60)
         },
         thypress:{
-            height:90,
-            width:700,
+            height:scaleHeight(90),
+            width:scaleWidth(700),
             backgroundColor:"rgb(51, 102, 255)",
-            marginLeft:40,
-            borderRadius:20,
-            marginTop:90
+            marginLeft:scaleWidth(40),
+            borderRadius:scaleWidth(20),
+            marginTop:scaleHeight(90)
         },
         presstxt:{
-            fontSize:40,
+            fontSize:scaleFont(40),
             color:"white",
-            paddingLeft:250,
-            paddingTop:13
+            paddingLeft:scaleWidth(250),
+            paddingTop:scaleHeight(13)
         }
     })
     

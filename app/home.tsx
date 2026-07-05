@@ -86,7 +86,7 @@ export default function thyHome(){
             paddingBottom:scaleHeight(10)
         },
         selbox:{
-            height:scaleHeight(70),
+            minHeight:scaleHeight(70),
             width:scaleWidth(295),
             borderWidth:scaleHeight(2),
             borderColor:"rgba(78, 75, 75, 1)",
@@ -96,7 +96,7 @@ export default function thyHome(){
 
         },
         thyexp:{
-            height:scaleHeight(70),
+            minHeight:scaleHeight(70),
             width:scaleWidth(595),
             borderWidth:scaleHeight(2),
             borderRadius:scaleHeight(10),
@@ -104,7 +104,7 @@ export default function thyHome(){
 
         },
         thypress:{
-            height:scaleHeight(90),
+            minHeight:scaleHeight(90),
             width:scaleWidth(700),
             backgroundColor:"rgb(51, 102, 255)",
             marginLeft:scaleWidth(40),
@@ -182,7 +182,7 @@ export default function thyHome(){
     return(
         <View>
             <ScrollView>
-                <View style={{height:scaleHeight(1900)}}>
+                <View style={{minHeight:scaleHeight(1900)}}>
                     <Text style={Styles.header}>Demographic Information</Text>
                     <Text style={Styles.thysub}>Step 1 of 4</Text>
                     <View style={Styles.insd}>

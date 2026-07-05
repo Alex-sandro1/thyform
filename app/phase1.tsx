@@ -28,7 +28,7 @@ export default function thph1(){
             color:"rgba(78, 75, 75, 1)"
         },
         insd:{
-            height:scaleHeight(1200),
+            minHeight:scaleHeight(1200),
             width:scaleWidth(700),
             backgroundColor:"white",
             marginLeft:scaleWidth(40),
@@ -53,7 +53,7 @@ export default function thph1(){
             marginBottom:scaleHeight(-10)
         },
         selbox:{
-            height:scaleHeight(70),
+            minHeight:scaleHeight(70),
             width:scaleWidth(295),
             borderWidth:scaleHeight(2),
             borderColor:"rgba(78, 75, 75, 1)",
@@ -63,7 +63,7 @@ export default function thph1(){
 
         },
         thysel:{
-            height:scaleHeight(60),
+            minHeight:scaleHeight(60),
             width:scaleWidth(100),
             borderRadius:scaleHeight(10),
             borderWidth:scaleHeight(2),
@@ -173,7 +173,7 @@ export default function thph1(){
 
     return(
         <ScrollView>
-            <View style={{height:scaleHeight(1570)}}>
+            <View style={{minHeight:scaleHeight(1570)}}>
                 <Text style={Styles.header}>Nature Of Your Mathematics Class</Text>
                 <Text style={Styles.thysub}>Step 2 of 4</Text>
                 <View style={Styles.insd}>

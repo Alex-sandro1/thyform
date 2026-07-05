@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { scaleFont, scaleHeight } from './thyscale'
 
 type theevars={
     label:number,
@@ -9,8 +10,9 @@ type theevars={
 export const Cards2:FC<theevars>=({label, isselect, setisselect})=>{
     const Styles=StyleSheet.create({
         thysel:{
-            height:60,
+            minHeight:60,
             width:100,
+            paddingBottom:scaleHeight(2),
             borderRadius:10,
             borderWidth:2,
             borderColor:isselect?"rgb(51, 102, 255)":"black",
@@ -18,7 +20,7 @@ export const Cards2:FC<theevars>=({label, isselect, setisselect})=>{
             backgroundColor:"white"
         },
         seltxt:{
-            fontSize:30,
+            fontSize:scaleFont(30),
             paddingLeft:40,
             paddingTop:5,
             color:isselect?"rgb(51, 102, 255)":"black"

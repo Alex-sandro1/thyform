@@ -2,6 +2,7 @@ import { Octicons } from '@expo/vector-icons'
 import { FC, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import Animated from 'react-native-reanimated'
+import { scaleFont, scaleHeight, scaleWidth } from './thyscale'
 
 type thyvarr={
     thyopn:boolean,
@@ -17,42 +18,42 @@ export const Cards1:FC<thyvarr>=({thyopn,setthyopn, thyobj, thyid, setthyid})=>{
     const[selopt,setselopt]=useState("Certificate")
     const Styles=StyleSheet.create({
         thybutton:{
-            height:70,
-            width:595,
+            height:scaleHeight(70),
+            width:scaleWidth(595),
             backgroundColor:"white",
-            borderRadius:13,
-            borderWidth:2,
+            borderRadius:scaleWidth(13),
+            borderWidth:scaleWidth(2),
             borderColor:"rgba(78, 75, 75, 1)"
         },
         drp:{
             opacity:thyopn?1:0,
-            height:thyopn?230:0,
-            width:595,
+            height:thyopn?scaleHeight(230):0,
+            width:scaleWidth(595),
             backgroundColor:"white",
             marginLeft:0,
-            marginTop:-10,
-            borderBottomRightRadius:10,
-            borderBottomLeftRadius:10,
+            marginTop:scaleHeight(-10),
+            borderBottomRightRadius:scaleWidth(10),
+            borderBottomLeftRadius:scaleWidth(10),
             borderTopWidth:0,
-            borderLeftWidth:2,
-            borderBottomWidth:2,
-            borderRightWidth:2,
+            borderLeftWidth:scaleWidth(2),
+            borderBottomWidth:scaleWidth(2),
+            borderRightWidth:scaleWidth(2),
             animationName:{
                 "0%":{transform:[{translateY:0}]},
-                "100%":{transform:[{translateY:230}]}
+                "100%":{transform:[{translateY:scaleHeight(230)}]}
             },
             transitionDuration:'400ms',
             zIndex:2,
         },
         txt:{
-            fontSize:25,
-            marginTop:17,
-            marginLeft:20,
+            fontSize:scaleFont(25),
+            marginTop:scaleHeight(17),
+            marginLeft:scaleWidth(20),
             zIndex:0
         },
         arr:{
-            marginLeft:540,
-            marginTop:-35,
+            marginLeft:scaleWidth(540),
+            marginTop:scaleHeight(-35),
         },
         thyopts:{
             opacity:thyopn?1:0,
