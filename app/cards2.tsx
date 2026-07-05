@@ -11,7 +11,7 @@ export const Cards2:FC<theevars>=({label, isselect, setisselect})=>{
     const Styles=StyleSheet.create({
         thysel:{
             minHeight:scaleHeight(24),
-            width:scaleHeight(38),
+            width:scaleHeight(48),
             paddingBottom:scaleHeight(2),
             borderRadius:scaleHeight(8),
             borderWidth:2,
