@@ -20,7 +20,7 @@ export const Cards:FC<theevars>=({label, isselect, setisselect})=>{
             margin:scaleHeight(-10)
         },
         seltxt:{
-            fontSize:scaleFont(30),
+            fontSize:scaleFont(24),
             paddingLeft:scaleWidth(10),
             paddingTop:scaleHeight(5),
             color:isselect?"rgb(51, 102, 255)":"black"

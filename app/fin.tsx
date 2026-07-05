@@ -16,7 +16,7 @@ export default function FinalFlash(){
             marginTop:scaleHeight(90),
         },
         succ:{
-            fontSize:scaleFont(60),
+            fontSize:scaleFont(46),
             color:"blue",
             paddingLeft:scaleWidth(130),
             paddingTop:scaleHeight(15),
@@ -24,14 +24,14 @@ export default function FinalFlash(){
 
         },
         succ1:{
-            fontSize:scaleFont(60),
+            fontSize:scaleFont(46),
             color:"blue",
             paddingLeft:scaleWidth(190),
             paddingTop:scaleHeight(-10),
             fontWeight:"700",
         },
         expl:{
-            fontSize:scaleFont(30),
+            fontSize:scaleFont(22),
             paddingLeft:scaleWidth(60)
         },
         thypress:{
@@ -43,7 +43,7 @@ export default function FinalFlash(){
             marginTop:scaleHeight(90)
         },
         presstxt:{
-            fontSize:scaleFont(40),
+            fontSize:scaleFont(32),
             color:"white",
             paddingLeft:scaleWidth(250),
             paddingTop:scaleHeight(13)

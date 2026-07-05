@@ -46,7 +46,7 @@ export const Cards1:FC<thyvarr>=({thyopn,setthyopn, thyobj, thyid, setthyid})=>{
             zIndex:2,
         },
         txt:{
-            fontSize:scaleFont(25),
+            fontSize:scaleFont(22),
             marginTop:scaleHeight(17),
             marginLeft:scaleWidth(20),
             zIndex:0

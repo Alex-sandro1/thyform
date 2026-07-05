@@ -19,12 +19,12 @@ export default function thyph3(){
     
     const Styles=StyleSheet.create({
         header:{
-            fontSize:scaleFont(50),
+            fontSize:scaleFont(40),
             paddingLeft:scaleWidth(40),
             paddingTop:scaleHeight(20)
         },
         thysub:{
-            fontSize:scaleFont(23),
+            fontSize:scaleFont(20),
             paddingLeft:scaleWidth(43),
             color:"rgba(78, 75, 75, 1)"
         },
@@ -42,7 +42,7 @@ export default function thyph3(){
 
         },
         thylabel:{
-            fontSize:scaleFont(25),
+            fontSize:scaleFont(22),
             paddingLeft:scaleWidth(50),
             paddingTop:scaleHeight(20),
             paddingBottom:scaleHeight(10)
@@ -72,7 +72,7 @@ export default function thyph3(){
             marginLeft:scaleWidth(10),
             marginTop:scaleHeight(14),
             borderRadius:scaleHeight(10),
-            fontSize:scaleFont(25),
+            fontSize:scaleFont(20),
             paddingLeft:scaleWidth(20),
             zIndex:0,
             
@@ -85,7 +85,7 @@ export default function thyph3(){
             marginLeft:scaleWidth(10),
             marginTop:scaleHeight(14),
             borderRadius:scaleHeight(10),
-            fontSize:scaleFont(25),
+            fontSize:scaleFont(20),
             paddingLeft:scaleWidth(20),
             zIndex:0,
            
@@ -100,7 +100,7 @@ export default function thyph3(){
             marginTop:scaleHeight(30)
         },
         presstxt:{
-            fontSize:scaleFont(40),
+            fontSize:scaleFont(32),
             color:"white",
             paddingLeft:scaleWidth(120),
             paddingTop:scaleHeight(13)
@@ -119,7 +119,7 @@ export default function thyph3(){
             borderWidth:scaleHeight(2)
         },
         presstxt1:{
-            fontSize:scaleFont(40),
+            fontSize:scaleFont(32),
             color:"black",
             paddingLeft:scaleWidth(120),
             paddingTop:scaleHeight(13)

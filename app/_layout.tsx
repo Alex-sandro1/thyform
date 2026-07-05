@@ -1,4 +1,5 @@
 import { Tabs } from 'expo-router'
+import { scaleFont } from './thyscale'
  
 export default function thyTabs(){
     return(
@@ -10,7 +11,7 @@ export default function thyTabs(){
                 headerTitleAlign:"left",
                 headerTintColor:"rgba(78, 75, 75, 1)",
                 headerTitleStyle:{
-                    fontSize:40,
+                    fontSize:scaleFont(34),
                     paddingLeft:20,
                     paddingBottom:10,
                     fontWeight:"600",
@@ -32,7 +33,7 @@ export default function thyTabs(){
                 headerTitleAlign:"left",
                 headerTintColor:"rgba(78, 75, 75, 1)",
                 headerTitleStyle:{
-                    fontSize:40,
+                    fontSize:scaleFont(34),
                     paddingLeft:20,
                     paddingBottom:10,
                     fontWeight:"600",
@@ -53,7 +54,7 @@ export default function thyTabs(){
                 headerTitleAlign:"left",
                 headerTintColor:"rgba(78, 75, 75, 1)",
                 headerTitleStyle:{
-                    fontSize:40,
+                    fontSize:scaleFont(34),
                     paddingLeft:20,
                     paddingBottom:10,
                     fontWeight:"600",
@@ -74,7 +75,7 @@ export default function thyTabs(){
                 headerTitleAlign:"left",
                 headerTintColor:"rgba(78, 75, 75, 1)",
                 headerTitleStyle:{
-                    fontSize:40,
+                    fontSize:scaleFont(34),
                     paddingLeft:20,
                     paddingBottom:10,
                     fontWeight:"600",
@@ -95,7 +96,7 @@ export default function thyTabs(){
                 headerTitleAlign:"left",
                 headerTintColor:"rgba(78, 75, 75, 1)",
                 headerTitleStyle:{
-                    fontSize:40,
+                    fontSize:scaleFont(34),
                     paddingLeft:20,
                     paddingBottom:10,
                     fontWeight:"600",
