@@ -10,20 +10,21 @@ type theevars={
 export const Cards2:FC<theevars>=({label, isselect, setisselect})=>{
     const Styles=StyleSheet.create({
         thysel:{
-            minHeight:30,
-            width:50,
+            minHeight:scaleHeight(34),
+            width:scaleHeight(48),
             paddingBottom:scaleHeight(2),
-            borderRadius:10,
+            borderRadius:scaleHeight(8),
             borderWidth:2,
             borderColor:isselect?"rgb(51, 102, 255)":"black",
-            marginLeft:20,
-            backgroundColor:"white"
+            marginLeft:scaleHeight(12),
+            backgroundColor:"white",
+            justifyContent:"center",
+            alignItems:"center"
         },
         seltxt:{
-            fontSize:scaleFont(24),
-            paddingLeft:40,
-            paddingTop:5,
-            color:isselect?"rgb(51, 102, 255)":"black"
+            fontSize:scaleFont(18),
+            color:isselect?"rgb(51, 102, 255)":"black",
+            textAlign:"center"
         }
 
     })
