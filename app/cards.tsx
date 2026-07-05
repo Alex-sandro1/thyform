@@ -15,8 +15,9 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
         container:{
             flexDirection:"row",
             alignItems:"center",
-            marginVertical:scaleHeight(6),
-            marginRight:scaleWidth(10)
+            justifyContent:"flex-start",
+            marginVertical:scaleHeight(2),
+            marginRight:scaleWidth(8)
         },
         thybutton:{
             height:scaleHeight(40),
@@ -25,11 +26,14 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
             borderRadius:scaleWidth(20),
             borderWidth:scaleWidth(2),
             borderColor:"rgba(78, 75, 75, 1)",
-            marginRight:scaleWidth(10)
+            marginRight:scaleWidth(6)
         },
         thylabel:{
             fontSize:scaleFont(22),
-            color:"rgba(78, 75, 75, 1)"
+            color:"rgba(78, 75, 75, 1)",
+            lineHeight:scaleHeight(24),
+            includeFontPadding:false,
+            textAlignVertical:"center"
         },
         
     })
