@@ -115,7 +115,7 @@ export default function thyHome(){
             fontSize:scaleFont(32),
             color:"white",
             paddingLeft:scaleWidth(270),
-            paddingTop:scaleHeight(13)
+            paddingTop:scaleHeight(7)
         }
 
     })
@@ -182,7 +182,7 @@ export default function thyHome(){
     return(
         <View>
             <ScrollView>
-                <View style={{minHeight:scaleHeight(1900)}}>
+                <View style={{minHeight:scaleHeight(1900),justifyContent:"center"}}>
                     <Text style={Styles.header}>Demographic Information</Text>
                     <Text style={Styles.thysub}>Step 1 of 4</Text>
                     <View style={Styles.insd}>
@@ -238,7 +238,7 @@ export default function thyHome(){
                         />
                     </View>
                     <TouchableOpacity style={Styles.thypress} onPress={()=>{thyconf()}}>
-                        <Text style={Styles.presstxt}>Next  <Ionicons name="arrow-forward" size={40} color="white"/></Text>
+                        <Text style={Styles.presstxt}>Next  <Ionicons name="arrow-forward" size={scaleWidth(40)} color="white"/></Text>
                     </TouchableOpacity>
                 </View>
                 

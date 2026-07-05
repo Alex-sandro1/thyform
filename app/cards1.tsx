@@ -68,7 +68,7 @@ export const Cards1:FC<thyvarr>=({thyopn,setthyopn, thyobj, thyid, setthyid})=>{
         <View>
             <Pressable style={Styles.thybutton} onPress={()=>{setthyopn(!thyopn)}}>
                 <Text style={Styles.txt}>{selopt}</Text>
-                {thyopn?<Octicons name="chevron-up" style={Styles.arr} size={40} color="black"/>:<Octicons name="chevron-down" style={Styles.arr} size={40} color="black"/>}
+                {thyopn?<Octicons name="chevron-up" style={Styles.arr} size={scaleWidth(40)} color="black"/>:<Octicons name="chevron-down" style={Styles.arr} size={scaleWidth(40)} color="black"/>}
             </Pressable>
             <Animated.Text style={Styles.drp}>
                 <View style={Styles.thyopts}>

@@ -18,7 +18,7 @@ export default function thyTabs(){
                     color:"rgb(51, 102, 255)"
                 },
                 headerStyle:{
-                    height:107,
+                    height:87,
                     backgroundColor:"rgba(255,255,255,1)",
                     
                 },
@@ -40,7 +40,7 @@ export default function thyTabs(){
                     color:"rgb(51, 102, 255)"
                 },
                 headerStyle:{
-                    height:107,
+                    height:87,
                     backgroundColor:"rgba(255,255,255,1)",
                     
                 },
@@ -61,7 +61,7 @@ export default function thyTabs(){
                     color:"rgb(51, 102, 255)"
                 },
                 headerStyle:{
-                    height:107,
+                    height:87,
                     backgroundColor:"rgba(255,255,255,1)",
                     
                 },
@@ -82,7 +82,7 @@ export default function thyTabs(){
                     color:"rgb(51, 102, 255)"
                 },
                 headerStyle:{
-                    height:107,
+                    height:87,
                     backgroundColor:"rgba(255,255,255,1)",
                     
                 },
@@ -103,7 +103,7 @@ export default function thyTabs(){
                     color:"rgb(51, 102, 255)"
                 },
                 headerStyle:{
-                    height:107,
+                    height:87,
                     backgroundColor:"rgba(255,255,255,1)",
                     
                 },

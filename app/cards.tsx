@@ -18,7 +18,7 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
             justifyContent:"flex-start",
             marginVertical:scaleHeight(2),
             marginRight:scaleWidth(8),
-            paddingTop:scaleHeight(5),
+            paddingTop:scaleHeight(10),
             paddingLeft:scaleWidth(15),
         },
         thybutton:{
