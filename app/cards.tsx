@@ -22,9 +22,9 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
             margin:10            
         },
         thylabel:{
-            paddingLeft:scaleWidth(60),
+            paddingLeft:scaleWidth(67),
             fontSize:scaleFont(22),
-            marginTop:scaleHeight(-43)
+            marginTop:scaleHeight(-37)
         },
         
     })
