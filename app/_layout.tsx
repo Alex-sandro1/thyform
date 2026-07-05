@@ -23,7 +23,7 @@ export default function thyTabs(){
                     
                 },
                 tabBarStyle:{
-                    height:0,
+                    height:30,
                 }
                 }}></Tabs.Screen>
             <Tabs.Screen name="cards" options ={{headerShown:false}}></Tabs.Screen>
@@ -108,7 +108,7 @@ export default function thyTabs(){
                     
                 },
                 tabBarStyle:{
-                    height:0,
+                    height:30,
                 }
             }}></Tabs.Screen>
         </Tabs>

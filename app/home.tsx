@@ -115,7 +115,7 @@ export default function thyHome(){
             fontSize:scaleFont(32),
             color:"white",
             paddingLeft:scaleWidth(270),
-            paddingTop:scaleHeight(7)
+            paddingTop:scaleHeight(10)
         }
 
     })
