@@ -10,8 +10,8 @@ type theevars={
 export const Cards2:FC<theevars>=({label, isselect, setisselect})=>{
     const Styles=StyleSheet.create({
         thysel:{
-            minHeight:60,
-            width:100,
+            minHeight:30,
+            width:50,
             paddingBottom:scaleHeight(2),
             borderRadius:10,
             borderWidth:2,

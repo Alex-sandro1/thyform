@@ -63,8 +63,8 @@ export default function thph1(){
 
         },
         thysel:{
-            minHeight:scaleHeight(30),
-            width:scaleWidth(50),
+            minHeight:scaleHeight(60),
+            width:scaleWidth(100),
             borderRadius:scaleHeight(10),
             borderWidth:scaleHeight(2),
             marginLeft:scaleWidth(20)
@@ -81,7 +81,7 @@ export default function thph1(){
             width:scaleWidth(595),
             marginLeft:scaleWidth(50),
             borderRadius:scaleHeight(10),
-            fontSize:scaleFont(20),
+            fontSize:scaleFont(27),
             paddingLeft:scaleWidth(20),
             zIndex:0
         },
