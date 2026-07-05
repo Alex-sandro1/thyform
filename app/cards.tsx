@@ -17,7 +17,9 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
             alignItems:"center",
             justifyContent:"flex-start",
             marginVertical:scaleHeight(2),
-            marginRight:scaleWidth(8)
+            marginRight:scaleWidth(8),
+            paddingTop:scaleHeight(5),
+            paddingLeft:scaleWidth(15),
         },
         thybutton:{
             height:scaleHeight(40),
