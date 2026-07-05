@@ -12,6 +12,12 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
     const[thyon,setthyon]=useState(true)
     const[col,setcol]=useState("white")
     const Styles=StyleSheet.create({
+        container:{
+            flexDirection:"row",
+            alignItems:"center",
+            marginVertical:scaleHeight(6),
+            marginRight:scaleWidth(10)
+        },
         thybutton:{
             height:scaleHeight(40),
             width:scaleWidth(40),
@@ -19,12 +25,11 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
             borderRadius:scaleWidth(20),
             borderWidth:scaleWidth(2),
             borderColor:"rgba(78, 75, 75, 1)",
-            margin:10            
+            marginRight:scaleWidth(10)
         },
         thylabel:{
-            paddingLeft:scaleWidth(71),
             fontSize:scaleFont(22),
-            marginTop:scaleHeight(-30)
+            color:"rgba(78, 75, 75, 1)"
         },
         
     })
@@ -33,14 +38,9 @@ export const Cards:FC<thyvars>=({label,isselect, setisselect})=>{
 
 
     return(
-        <View>
-            <TouchableOpacity onPress={setisselect}>
-                <View style={Styles.thybutton}></View>
-                <Text style={Styles.thylabel}>{label}</Text>
-            </TouchableOpacity>    
-                
-            
-        </View>
-            
+        <TouchableOpacity onPress={setisselect} style={Styles.container}>
+            <View style={Styles.thybutton}></View>
+            <Text style={Styles.thylabel}>{label}</Text>
+        </TouchableOpacity>
     )
 }
